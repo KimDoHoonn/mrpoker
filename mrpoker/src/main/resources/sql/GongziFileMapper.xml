@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="objackie.dao.GongziFileDao">
+  <resultMap type="gongziFile" id="gongziFileMap">
+    <id column="BOD_NO" property="no"/> 
+    <result column="PHO_NO" property="phoNo"/>
+    <result column="PHO_PATH" property="phopath"/>
+  </resultMap>
+  
+  <insert id="insert" parameterType="gongziFile">
+    insert into bod_pho(BOD_NO, PHO_PATH)
+    values(#{no}, #{phopath})
+  </insert>
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

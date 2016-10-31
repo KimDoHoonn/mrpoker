@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>공지사항</title>
+
+<link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap-theme.min.css">
+<link rel="stylesheet" type="text/css" href="../../css/board/gongziInput.css">
+
+</head>
+<body>
+	<header>
+		<h1 style="text-align: center">Header</h1>
+	</header>
+
+	<section>
+		<h1>공지 입력</h1>
+
+		<form class="form-horizontal" action="add.do" method="post" enctype="multipart/form-data">
+
+			<div class="form-group">
+				<label for="writer" class="col-sm-2 control-label">이메일</label>
+				<div class="col-sm-10">
+					<input type="text" class="form-control" id="email"
+						placeholder="이메일">
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label for="writer" class="col-sm-2 control-label">작성자</label>
+				<div class="col-sm-10">
+					<input type="text" class="form-control" id="writer"
+						placeholder="작성자">
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label for="title" class="col-sm-2 control-label">제목</label>
+				<div class="col-sm-10">
+					<input type="text" class="form-control" id="title"
+						placeholder="제목입니다.">
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label for="contents" class="col-sm-2 control-label">내용</label>
+				<div class="col-sm-10">
+					<textarea id="contents" class="form-control limitation" cols="50" rows="10"
+						placeholder="내용입니다."></textarea>
+				</div>
+			</div>
+
+			<div class="form-group my-view">
+				<label class="col-sm-2 control-label">등록일</label>
+				<div class="col-sm-10">
+					<p id="createdDate" class="form-control-static"></p>
+				</div>
+			</div>
+			<div>
+      파일1: <input type="file" name="file1" id="file1"><br>
+      파일2: <input type="file" name="file2" id="file2"><br>
+      </div>
+
+			<div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+					<button id="addBtn" type="button" class="btn btn-default my-new">등록</button>
+					<button id="cancelBtn" type="button" class="btn btn-default"
+						onclick="location.href='gongzi.html'">취소</button>
+				</div>
+			</div>
+			
+<!-- 입력폼 항목에 이름이 없으면 서버에 데이터를 보내지 않는다 
+     해결책? name 속성을 사용하여 파라미터명을 부여하라! -->
+  
+		</form>
+
+	</section>
+
+	<footer>
+		<h1 style="text-align: center">footer</h1>
+	</footer>
+
+	<script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+<script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../js/common.js"></script>
+<script type="text/javascript" src="../../js/bit.js"></script>
+<script type="text/javascript" src="../../js/board/gongziInput.js"></script>
+
+</body>
+</html>

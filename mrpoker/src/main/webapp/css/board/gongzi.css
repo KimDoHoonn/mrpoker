@@ -1,0 +1,68 @@
+@CHARSET "UTF-8";
+
+html {
+  height: 100%;
+  display: table;
+  margin: auto;
+}
+
+body {	
+  width: 1024px;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+header {
+  width: 1024px;
+  height: 150px;
+  margin: 0 auto;
+}
+
+section {
+	width: 1024px;
+	margin: 0 auto;	
+}
+
+footer {
+  width: 1024px;
+  height: 150px;
+  margin: 0 auto;
+  clear: both;
+}
+
+/* div {
+	border: 1px solid black;
+} */
+
+.crud-bar {
+  width: 100%;
+  height: 80px;
+}
+
+
+.sub_section {
+	height: 270px;
+	
+}
+
+.ellipsis{
+ overflow: hidden;
+ text-overflow: ellipsis;
+ display: -webkit-box;
+ -webkit-line-clamp: 6; /* 라인수 */
+ -webkit-box-orient: vertical;
+ word-wrap:break-word; 
+ line-height: 1.2em;
+ height: 7.2em; /* line-height 가 1.2em 이고 3라인을 자르기 때문에 height는 1.2em * 3 = 3.6em */
+} 
+
+.button_space {
+  heght: 60px;	
+}
+
+
+.main_photo {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}

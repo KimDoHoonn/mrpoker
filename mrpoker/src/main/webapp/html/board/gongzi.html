@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>공지 사항</title>
+
+<link rel="stylesheet"
+  href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+<link rel="stylesheet"
+  href="../../node_modules/bootstrap/dist/css/bootstrap-theme.min.css">
+<link rel="stylesheet" type="text/css" href="../../css/board/gongzi.css">
+
+</head>
+<body>
+	<header>
+		<h1 style="text-align: center">header</h1>
+	</header>
+	<section>
+		<div>
+			<img style="width: 600px" class="main_photo" src="../../images/army.PNG" alt="예비군사진">
+			<div id="firstTable"></div>
+
+    <script id="frTemplateText" type="text/x-handlebars-template">
+{{#each list}}
+<div>
+  <h1>{{title}}</h1>
+  <p>{{contents}}</p>  
+</div>
+{{/each}}
+
+</script>
+		</div>
+		<div class="crud-bar">
+			<button type="button" class="btn btn-primary" style="margin: 20px"
+				onclick="location.href='gongziInput.html'">새 공지 쓰기</button>
+		</div>
+		<div class="col-lg-12">
+			<div class="well text-center">전체 공지 보기</div>
+		</div>
+
+		<div id="gongziTable"></div>
+
+		<script id="trTemplateText" type="text/x-handlebars-template">
+{{#each list}}
+<div class="col-md-4 sub_section">
+  <p>{{no}}</p>
+  <h3>{{title}}</h3>
+  <p class="ellipsis">{{contents}}</p>  
+  <button class="card1" data-no="{{no}}" type="button" class="btn btn-default my-view">전체 보기</button>
+</div>
+{{/each}}
+
+</script>
+		<script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../../node_modules/handlebars/dist/handlebars.min.js"></script>
+    <script type="text/javascript" src="../../js/common.js"></script>
+    <script type="text/javascript" src="../../js/bit.js"></script>
+    <script type="text/javascript" src="../../js/board/gongzi.js"></script>
+		<script>
+		  ajaxFirstList()
+		</script>
+		<script>
+			ajaxGongziList()
+		</script>
+	</section>
+	<footer>
+		<h1 style="text-align: center">footer</h1>
+	</footer>
+
+
+</body>
+</html>
+
+
+

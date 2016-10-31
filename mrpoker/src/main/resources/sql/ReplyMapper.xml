@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="objackie.dao.ReplyDao">
+  <resultMap type="reply" id="replyMap">
+    <id column="RPLY_NO" property="reno"/> 
+    <result column="BOD_NO" property="no"/>
+    <result column="EMAIL" property="email"/>
+    <result column="CONTS" property="reContents"/>
+    <result column="CRD_DT" property="createdDate"/>
+  </resultMap>
+  
+  <select id="selectList" resultMap="replyMap" parameterType="int">
+    select RPLY_NO,EMAIL,CONTS,CRD_DT,BOD_NO
+    from bod_rply
+    where BOD_NO=#{value}
+    order by RPLY_NO desc
+  </select>
+  
+ <select id="selectOne" resultMap="replyMap" parameterType="int">
+    select RPLY_NO,CONTS,BOD_NO,EMAIL,CRD_DT
+    from bod_rply
+    where RPLY_NO = #{reno}
+  </select>  
+  
+  <insert id="insert" parameterType="reply">
+    insert into bod_rply(EMAIL,CONTS,CRD_DT,BOD_NO)
+    values("ryu@bit.com",#{reContents},now(),#{no})
+  </insert>
+  
+  <update id="update" parameterType="reply">
+    update bod_rply set 
+      CONTS=#{reContents}
+    where RPLY_NO=#{reno}
+  </update>
+  
+  <delete id="delete" parameterType="int">
+    delete from bod_rply
+    where RPLY_NO=#{value}
+  </delete> 
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

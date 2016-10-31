@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="objackie.dao.GongziDao">
+  <resultMap type="gongzi" id="gongziMap">
+    <id column="BOD_NO" property="no"/> 
+    <result column="TYPE" property="type"/>
+    <result column="EMAIL" property="email"/>
+    <result column="CONTS" property="contents"/>
+    <result column="CRE_DT" property="createdDate"/>
+    <result column="VW_CNT" property="viewCount"/>
+    <result column="TITLE" property="title"/>
+    <result column="WRITER" property="writer"/>
+  </resultMap>
+  
+  <select id="selectList" resultMap="gongziMap" parameterType="map">
+    select BOD_NO,TITLE,CRE_DT,VW_CNT,CONTS
+    from board
+  where type=0
+    order by BOD_NO desc
+    
+    limit #{startIndex}, #{length}
+  </select>
+  
+ <select id="selectOne" resultMap="gongziMap" parameterType="int">
+    select BOD_NO,WRITER,EMAIL,TITLE,CRE_DT,VW_CNT,CONTS
+    from board
+    where BOD_NO = #{value} and type=0
+  </select>  
+  
+  <insert id="insert" parameterType="gongzi">
+    insert into board(EMAIL, TYPE, TITLE, CONTS, VW_CNT, CRE_DT, WRITER)
+    values("ryu@bit.com", 0, #{title}, #{contents}, 0, now(), #{writer})
+  </insert>
+  
+  <update id="update" parameterType="gongzi">
+    update board set 
+      TITLE=#{title}, 
+      CONTS=#{contents} 
+    where BOD_NO=#{no} and type=0
+  </update>
+  
+  <delete id="delete" parameterType="int">
+    delete from board
+    where BOD_NO=#{value} and type=0
+  </delete> 
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

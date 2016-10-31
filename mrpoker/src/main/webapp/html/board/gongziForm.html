@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>공지 사항</title>
+<link rel="stylesheet"
+  href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+<link rel="stylesheet"
+  href="../../node_modules/bootstrap/dist/css/bootstrap-theme.min.css">
+<link rel="stylesheet" type="text/css" href="../../css/board/gongziForm.css">
+</head>
+<body>
+	<header>
+		<h1 style="text-align: center">Header</h1>
+	</header>
+
+	<section>
+
+		<h2 style="text-align: center">공지사항</h2>
+		<hr>
+		<form class="form-horizontal">
+
+			<div>
+				<input type="text" id="title" class="title" readonly>
+			</div>
+
+			<div class="ryu1">
+				<ul class="ryu">
+					<li id="no"></li>
+					<li id="writer"></li>
+					<li id="createdDate"></li>
+					<li>조회수 :</li>
+					<li id="viewCount"></li>
+				</ul>
+			</div>
+
+			<div>
+				<p id="contents" class="textWrap"></p>
+			</div>
+
+			<div class="btn_group">
+				<div class="sort_left">
+					<button type="button" class="btn btn-primary btn-lg" id="updateBtn">수정</button>
+					<button id="deleteBtn" type="button" class="btn btn-primary btn-lg">삭제</button>
+				</div>
+				<div class="sort_right">
+					<button id="cancelBtn" type="button" class="btn btn-primary btn-lg"
+						onclick="location.href='gongzi.html'">목록</button>
+				</div>
+			</div>
+		</form>
+
+		<form class="form-inline">
+			<div class="form-group">
+				<label for="reContents" class="col-sm-2 control-label">내용</label>
+				<div class="col-sm-10">
+					<textarea id="reContents" class="form-control reAddLimit" cols="100" rows="5"
+						placeholder="내용입니다."></textarea>
+					<button id="reAddBtn" type="button" class="btn btn-default">등록</button>
+				</div>
+			</div>
+		</form>
+
+		<table id="replyTable" class="table table-hover">
+			<tbody></tbody>
+		</table>
+
+
+	</section>
+
+	<footer>
+		<h1 style="text-align: center">footer</h1>
+	</footer>
+
+	<script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="../../node_modules/handlebars/dist/handlebars.min.js"></script>
+  <script type="text/javascript" src="../../js/common.js"></script>
+  <script type="text/javascript" src="../../js/bit.js"></script>
+  <script type="text/javascript" src="../../js/board/gongziForm.js"></script>
+  <script type="text/javascript" src="../../js/board/reply.js"></script>
+	<script id="rrTemplateText" type="text/x-handlebars-template">
+{{#each data}}
+<tr data-no="{{reno}}">
+  <td>{{reno}}</td>
+  <td>{{email}}</td>
+  <td>{{reContents}}</td>
+  <td>{{createdDate}}</td>
+  <td>{{no}}</td>
+  <td>
+    <button type="button" class="btn btn-primary btn-sm bit-update-btn" data-no="{{reno}}">수정</button>
+    <button type="button" class="btn btn-primary btn-sm bit-delete-btn" data-no="{{reno}}">삭제</button>
+  </td>
+</tr>
+{{/each}}
+</script>
+
+	<script>
+		if (location.search.startsWith("?")) {
+			var no = location.search.split("=")[1];
+			ajaxReplyList(no)
+		}
+	</script>
+	<script>
+		if (location.search.startsWith("?")) {
+			var no = location.search.split("=")[1];
+			ajaxLoadGongzi(no)
+		}
+	</script>
+
+</body>
+</html>

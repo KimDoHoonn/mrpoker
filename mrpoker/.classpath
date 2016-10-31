@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry path="src" kind="src"/>
+	<classpathentry path="bin" kind="output"/>
+	<classpathentry path="src/main/java" kind="src"/>
+	<classpathentry path="src/main/resources" kind="src"/>
+	<classpathentry path="src/test/java" kind="src"/>
+	<classpathentry path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8/" kind="con"/>
+	<classpathentry path="org.eclipse.jst.j2ee.internal.web.container" kind="con"/>
+	<classpathentry path="C:/Users/BitCamp/.gradle/caches/modules-2/files-2.1/org.mybatis/mybatis/3.4.1/c5624f69848187a6bf1865cf64467beecdb9fa68/mybatis-3.4.1.jar" kind="lib" sourcepath="C:/Users/BitCamp/.gradle/caches/modules-2/files-2.1/org.mybatis/mybatis/3.4.1/def7644f88b49d068b3f06948b631bf762e02eef/mybatis-3.4.1-sources.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry path="C:/Users/BitCamp/.gradle/caches/modules-2/files-2.1/mysql/mysql-connector-java/5.1.39/4617fe8dc8f1969ec450984b0b9203bc8b7c8ad5/mysql-connector-java-5.1.39.jar" kind="lib" sourcepath="C:/Users/BitCamp/.gradle/caches/modules-2/files-2.1/mysql/mysql-connector-java/5.1.39/613d0456fa79f67749af2754b6c23abf43b9574f/mysql-connector-java-5.1.39-sources.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry path="C:/Users/BitCamp/.gradle/caches/modules-2/files-2.1/org.mybatis/mybatis-spring/1.3.0/d1dbdc46cac543447ffd5aeda59f1a9bb34f0912/mybatis-spring-1.3.0.jar" kind="lib" sourcepath="C:/Users/BitCamp/.gradle/caches/modules-2/files-2.1/org.mybatis/mybatis-spring/1.3.0/2022be53ff19021a08c89fe58d52fdb28c654e75/mybatis-spring-1.3.0-sources.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry path="C:/Users/BitCamp/.gradle/caches/modules-2/files-2.1/org.springframework/spring-jdbc/4.3.2.RELEASE/d60bd9daf7d819c72e6a27fad16c4683b2e7df11/spring-jdbc-4.3.2.RELEASE.jar" kind="lib" sourcepath="C:/Users/BitCamp/.gradle/caches/modules-2/files-2.1/org.springframework/spring-jdbc/4.3.2.RELEASE/a8943a4ba041e29ddf9b313ba8f1f5f8aab768a/spring-jdbc-4.3.2.RELEASE-sources.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry path="C:/Users/BitCamp/.gradle/caches/modules-2/files-2.1/org.springframework/spring-webmvc/4.3.2.RELEASE/99b68a8aca2ed67ad523e7341a90dd1c90fd669e/spring-webmvc-4.3.2.RELEASE.jar" kind="lib" sourcepath="C:/Users/BitCamp/.gradle/caches/modules-2/files-2.1/org.springframework/spring-webmvc/4.3.2.RELEASE/aca3ae146872101026f1b43463ab7f12a6893358/spring-webmvc-4.3.2.RELEASE-sources.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry path="C:/Users/BitCamp/.gradle/caches/modules-2/files-2.1/javax.servlet/jstl/1.2/74aca283cd4f4b4f3e425f5820cda58f44409547/jstl-1.2.jar" kind="lib" sourcepath="C:/Users/BitCamp/.gradle/caches/modules-2/files-2.1/javax.servlet/jstl/1.2/2f5877ef15adb721421e80f5aa2b6fe069eec8ed/jstl-1.2-sources.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry path="C:/Users/BitCamp/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.7/751f548c85fa49f330cecbb1875893f971b33c4e/gson-2.7.jar" kind="lib" sourcepath="C:/Users/BitCamp/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.7/bbb63ca253b483da8ee53a50374593923e3de2e2/gson-2.7-sources.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry path="C:/Users/BitCamp/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-databind/2.8.3/cea3788c72271d45676ce32c0665991674b24cc5/jackson-databind-2.8.3.jar" kind="lib" sourcepath="C:/Users/BitCamp/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-databind/2.8.3/a1e9c8ae4bd8ce4da2a2cb5630a09c155a6d8043/jackson-databind-2.8.3-sources.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry path="C:/Users/BitCamp/.gradle/caches/modules-2/files-2.1/commons-fileupload/commons-fileupload/1.3.2/5d7491ed6ebd02b6a8d2305f8e6b7fe5dbd95f72/commons-fileupload-1.3.2.jar" kind="lib" sourcepath="C:/Users/BitCamp/.gradle/caches/modules-2/files-2.1/commons-fileupload/commons-fileupload/1.3.2/23996750d5a80dc74dad55633c2a0f3db91462cb/commons-fileupload-1.3.2-sources.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry path="C:/Users/BitCamp/.gradle/caches/modules-2/files-2.1/org.springframework/spring-aop/4.3.2.RELEASE/caef216e995f565dd4ab165ec5918ff44487615d/spring-aop-4.3.2.RELEASE.jar" kind="lib" sourcepath="C:/Users/BitCamp/.gradle/caches/modules-2/files-2.1/org.springframework/spring-aop/4.3.2.RELEASE/36facb73244b336b0c12a27454b4ff3fed30eebd/spring-aop-4.3.2.RELEASE-sources.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry path="C:/Users/BitCamp/.gradle/caches/modules-2/files-2.1/org.aspectj/aspectjweaver/1.8.9/db28774f477f07220eac18d5ec9c4e01f48589d7/aspectjweaver-1.8.9.jar" kind="lib" sourcepath="C:/Users/BitCamp/.gradle/caches/modules-2/files-2.1/org.aspectj/aspectjweaver/1.8.9/9a10b6740c821d03b800a6062284b4a99de4fbeb/aspectjweaver-1.8.9-sources.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry path="C:/Users/BitCamp/.gradle/caches/modules-2/files-2.1/javax.servlet/javax.servlet-api/3.0.1/6bf0ebb7efd993e222fc1112377b5e92a13b38dd/javax.servlet-api-3.0.1.jar" kind="lib" sourcepath="C:/Users/BitCamp/.gradle/caches/modules-2/files-2.1/javax.servlet/javax.servlet-api/3.0.1/1952f91d84016a39e31346c9d18bd8c9c4a128a/javax.servlet-api-3.0.1-sources.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry path="C:/Users/BitCamp/.gradle/caches/modules-2/files-2.1/org.springframework/spring-beans/4.3.2.RELEASE/9e87f48f65a33a017f2dd027911947a28be29f93/spring-beans-4.3.2.RELEASE.jar" kind="lib" sourcepath="C:/Users/BitCamp/.gradle/caches/modules-2/files-2.1/org.springframework/spring-beans/4.3.2.RELEASE/72acec93b901c2f88613fec3660e0311c3d25d3/spring-beans-4.3.2.RELEASE-sources.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry path="C:/Users/BitCamp/.gradle/caches/modules-2/files-2.1/org.springframework/spring-core/4.3.2.RELEASE/fd2f3cf45d3c84f293cb7ee3ab7d24c979495552/spring-core-4.3.2.RELEASE.jar" kind="lib" sourcepath="C:/Users/BitCamp/.gradle/caches/modules-2/files-2.1/org.springframework/spring-core/4.3.2.RELEASE/4d695ffe01b7f23d66dc8d587f78212fecc70614/spring-core-4.3.2.RELEASE-sources.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry path="C:/Users/BitCamp/.gradle/caches/modules-2/files-2.1/org.springframework/spring-tx/4.3.2.RELEASE/dd75075485ddebb1f912102527ff91c4bfbae903/spring-tx-4.3.2.RELEASE.jar" kind="lib" sourcepath="C:/Users/BitCamp/.gradle/caches/modules-2/files-2.1/org.springframework/spring-tx/4.3.2.RELEASE/7ccda015cdb123f208807805f330809b1a75d3fb/spring-tx-4.3.2.RELEASE-sources.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry path="C:/Users/BitCamp/.gradle/caches/modules-2/files-2.1/org.springframework/spring-context/4.3.2.RELEASE/e52782b824e097c3b1586b497fc6be0e95020770/spring-context-4.3.2.RELEASE.jar" kind="lib" sourcepath="C:/Users/BitCamp/.gradle/caches/modules-2/files-2.1/org.springframework/spring-context/4.3.2.RELEASE/aed414800c159e0a45cb0af43c2a8c22cab8faac/spring-context-4.3.2.RELEASE-sources.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry path="C:/Users/BitCamp/.gradle/caches/modules-2/files-2.1/org.springframework/spring-expression/4.3.2.RELEASE/7676acd4dde9d186b7f882edce3131dc62dcb590/spring-expression-4.3.2.RELEASE.jar" kind="lib" sourcepath="C:/Users/BitCamp/.gradle/caches/modules-2/files-2.1/org.springframework/spring-expression/4.3.2.RELEASE/179fbc6fc078a00c0fe0f7e88691022028fd88e7/spring-expression-4.3.2.RELEASE-sources.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry path="C:/Users/BitCamp/.gradle/caches/modules-2/files-2.1/org.springframework/spring-web/4.3.2.RELEASE/562b3b775b6e8e7113b5d23b21946f939658bd19/spring-web-4.3.2.RELEASE.jar" kind="lib" sourcepath="C:/Users/BitCamp/.gradle/caches/modules-2/files-2.1/org.springframework/spring-web/4.3.2.RELEASE/f0e4e72a7af722a285dc46cff641f058a46071db/spring-web-4.3.2.RELEASE-sources.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry path="C:/Users/BitCamp/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-annotations/2.8.0/45b426f7796b741035581a176744d91090e2e6fb/jackson-annotations-2.8.0.jar" kind="lib" sourcepath="C:/Users/BitCamp/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-annotations/2.8.0/29a1a95363d497e856c0a7d682e4f7973e334068/jackson-annotations-2.8.0-sources.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry path="C:/Users/BitCamp/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.8.3/5e1dc37c96308851c3ff609c250dc849c4b12022/jackson-core-2.8.3.jar" kind="lib" sourcepath="C:/Users/BitCamp/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.8.3/9c280322a03bc67e38c7d920fed0255c0ac900a8/jackson-core-2.8.3-sources.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry path="C:/Users/BitCamp/.gradle/caches/modules-2/files-2.1/commons-io/commons-io/2.2/83b5b8a7ba1c08f9e8c8ff2373724e33d3c1e22a/commons-io-2.2.jar" kind="lib" sourcepath="C:/Users/BitCamp/.gradle/caches/modules-2/files-2.1/commons-io/commons-io/2.2/8d6b98f21262995489a8418fff8da992d7e25c1e/commons-io-2.2-sources.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry path="C:/Users/BitCamp/.gradle/caches/modules-2/files-2.1/commons-logging/commons-logging/1.2/4bfc12adfe4842bf07b657f0369c4cb522955686/commons-logging-1.2.jar" kind="lib" sourcepath="C:/Users/BitCamp/.gradle/caches/modules-2/files-2.1/commons-logging/commons-logging/1.2/ecf26c7507d67782a3bbd148d170b31dfad001aa/commons-logging-1.2-sources.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+</classpath>

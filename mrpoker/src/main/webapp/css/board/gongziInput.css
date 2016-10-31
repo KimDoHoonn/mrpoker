@@ -1,0 +1,31 @@
+@CHARSET "UTF-8";
+
+html {
+  height: 100%;
+  display: table;
+  margin: auto;
+}
+
+body {  
+  width: 1024px;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+header {
+  width: 1024px;
+  height: 150px;
+  margin: 0 auto;
+}
+
+section {
+  width: 1024px;
+  margin: 0 auto; 
+}
+
+footer {
+  width: 1024px;
+  height: 150px;
+  margin: 0 auto;
+  clear: both;
+}
