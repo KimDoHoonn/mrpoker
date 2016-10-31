@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry path="src" kind="src"/>
 	<classpathentry path="bin" kind="output"/>
 	<classpathentry path="src/main/java" kind="src"/>
 	<classpathentry path="src/main/resources" kind="src"/>

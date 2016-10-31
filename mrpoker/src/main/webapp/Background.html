@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet"
+	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<script
+	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<meta charset="UTF-8">
+
+<title>WELCOME TO POKER WORLD!</title>
+<style>
+body {
+	width: 960px;
+	margin: 20px auto;
+	background: #000000;
+}
+
+.container {
+	background: url(bg.gif) repeat-y top left;
+	width: 960px;
+}
+
+.content {
+	background: url(pokercard.jpg);
+	width: 960px;
+	height: 600px;
+	float: left;
+}
+
+.header {
+	background: url(mainlogo.jpg);
+	background-color: #000000;
+	background-repeat: no-repeat;
+	height: 100px;
+}
+
+.footer {
+	height: 100px;
+	background: #000000;
+}
+
+.clear {
+	clear: both;
+}
+</style>
+</head>
+
+<body>
+	<div class="header">
+		<p>
+			<span style="float: right">
+				<button class="btn btn-large btn-primary" type="button">공지사항</button>
+				<button class="btn btn-large btn-primary" type="button"
+					onclick="window.open('index.jsp','window_name','width=980,height=500,location=no,status=no,scrollbars=yes');">게임하기</button>
+				<button class="btn btn-large btn-primary" type="button">QnA</button>
+				<button class="btn btn-large btn-primary" type="button"
+				onclick="window.open('http://localhost:7070/index.html','window_name','width=450,height=500,location=no,status=no,scrollbars=yes');">채팅하기</button>
+				<button class="btn btn-large btn-primary" type="button">로그인</button>
+			</span>
+		</p>
+	</div>
+	<div class="content"></div>
+	<div class="clear"></div>
+	<div class="clear"></div>
+	<div class="footer">푸터</div>
+</body>
+</html>
