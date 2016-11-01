@@ -1,4 +1,4 @@
-<%@page import="objackie.vo.Gongzi"%>
+<%@page import="notice.vo.Gongzi"%>
 <%@page import="java.util.List"%>
 <%@ page language="java" 
          contentType="text/html; charset=UTF-8"

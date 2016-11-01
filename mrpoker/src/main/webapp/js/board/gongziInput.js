@@ -17,13 +17,13 @@ $("#addBtn").click(function(event) {
 });
 
 function ajaxAddGongzi(gongzi) {
-	$.post(serverAddr + "/gongzi/add.json", gongzi, function(obj) {
+	$.post(serverAddr + "/mrpoker/add.json", gongzi, function(obj) {
 		var result = obj.jsonResult
 		if (result.state != "success") {
 	    	 alert("등록 실패입니다.")
 	    	 return
 	    } 
-		window.location.href = serverAddr + "/html/board/gongzi.html"
+		//window.location.href = serverAddr + "/html/board/gongzi.html"
 	    
 	}, "json")
 }

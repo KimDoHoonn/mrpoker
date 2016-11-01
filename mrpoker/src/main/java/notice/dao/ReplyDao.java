@@ -1,8 +1,8 @@
-package objackie.dao;
+package notice.dao;
 
 import java.util.List;
 
-import objackie.vo.Reply;
+import notice.vo.Reply;
 
 public interface ReplyDao {
   List<Reply> selectList(int no) throws Exception;

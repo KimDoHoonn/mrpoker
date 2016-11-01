@@ -1,4 +1,4 @@
-package objackie.controller;
+package notice.controller;
 
 import java.util.List;
 
@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
-import objackie.service.GongziService;
-import objackie.vo.Gongzi;
+import notice.service.GongziService;
+import notice.vo.Gongzi;
 
 @Controller 
 @RequestMapping("/gongzi/")

@@ -1,10 +1,10 @@
-package objackie.service;
+package notice.service;
 
 import java.util.List;
 
 import org.springframework.web.multipart.MultipartFile;
 
-import objackie.vo.Gongzi;
+import notice.vo.Gongzi;
 
 public interface GongziService {
   List<Gongzi> getGongziList(int pageNo, int length) throws Exception;

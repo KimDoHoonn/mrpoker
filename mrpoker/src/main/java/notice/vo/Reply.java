@@ -1,4 +1,4 @@
-package objackie.vo;
+package notice.vo;
 
 import java.io.Serializable;
 import java.sql.Date;

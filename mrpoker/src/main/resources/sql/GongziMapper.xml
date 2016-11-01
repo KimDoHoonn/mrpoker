@@ -2,50 +2,47 @@
 <!DOCTYPE mapper
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="objackie.dao.GongziDao">
+<mapper namespace="notice.dao.GongziDao">
   <resultMap type="gongzi" id="gongziMap">
-    <id column="BOD_NO" property="no"/> 
-    <result column="TYPE" property="type"/>
-    <result column="EMAIL" property="email"/>
-    <result column="CONTS" property="contents"/>
-    <result column="CRE_DT" property="createdDate"/>
-    <result column="VW_CNT" property="viewCount"/>
-    <result column="TITLE" property="title"/>
-    <result column="WRITER" property="writer"/>
+    <id column="NOTICE_NUMBER" property="no"/> 
+    <result column="NOTICE_CONTS" property="contents"/>
+    <result column="NOTICE_DATE" property="createdDate"/>
+    <result column="NOTICE_VIEW" property="viewCount"/>
+    <result column="NOTICE_TITLE" property="title"/>
+    <result column="NOTICE_WRITER" property="writer"/>
   </resultMap>
   
   <select id="selectList" resultMap="gongziMap" parameterType="map">
-    select BOD_NO,TITLE,CRE_DT,VW_CNT,CONTS
-    from board
-  where type=0
-    order by BOD_NO desc
-    
+    select NOTICE_NUMBER,NOTICE_TITLE,NOTICE_DATE,NOTICE_VIEW,NOTICE_CONTS
+    from notice
     limit #{startIndex}, #{length}
   </select>
   
  <select id="selectOne" resultMap="gongziMap" parameterType="int">
-    select BOD_NO,WRITER,EMAIL,TITLE,CRE_DT,VW_CNT,CONTS
-    from board
-    where BOD_NO = #{value} and type=0
+    select NOTICE_NUMBER,NOTICE_WRITER,NOTICE_TITLE,NOTICE_DATE,NOTICE_VIEW,NOTICE_CONTS
+    from notice
+       where no = #{value}
   </select>  
   
   <insert id="insert" parameterType="gongzi">
-    insert into board(EMAIL, TYPE, TITLE, CONTS, VW_CNT, CRE_DT, WRITER)
-    values("ryu@bit.com", 0, #{title}, #{contents}, 0, now(), #{writer})
+    insert into notice(NOTICE_TITLE, NOTICE_CONTS, NOTICE_VIEW, NOTICE_DATE, NOTICE_WRITER)
+    values(#{title}, #{contents}, 0, now(), #{writer})
   </insert>
   
   <update id="update" parameterType="gongzi">
-    update board set 
-      TITLE=#{title}, 
-      CONTS=#{contents} 
-    where BOD_NO=#{no} and type=0
+    update notice set 
+      NOTICE_TITLE=#{title}, 
+      NOTICE_CONTS=#{contents} 
+    where NOTICE_NUMBER=#{no} and type=0
   </update>
   
   <delete id="delete" parameterType="int">
-    delete from board
-    where BOD_NO=#{value} and type=0
+    delete from notice
+    where NOTICE_NUMBER=#{value} and type=0
   </delete> 
 </mapper>
+
+
 
 
 

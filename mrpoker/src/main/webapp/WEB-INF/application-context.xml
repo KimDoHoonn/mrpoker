@@ -14,7 +14,7 @@
         http://www.springframework.org/schema/aop
         http://www.springframework.org/schema/aop/spring-aop.xsd">
 
-	<context:component-scan base-package="objackie">
+	<context:component-scan base-package="notice">
 		<context:exclude-filter type="annotation"
 			expression="org.springframework.stereotype.Controller" />
 	</context:component-scan>
@@ -32,11 +32,11 @@
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource" />
 		<property name="mapperLocations" value="classpath*:sql/*Mapper.xml" />
-		<property name="typeAliasesPackage" value="objackie.vo" />
+		<property name="typeAliasesPackage" value="notice.vo" />
 	</bean>
 
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-		<property name="basePackage" value="objackie.dao" />
+		<property name="basePackage" value="notice.dao" />
 	</bean>
 
 	<!-- 트랜잭션 관리자 등록 -->

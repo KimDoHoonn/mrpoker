@@ -1,6 +1,6 @@
-package objackie.dao;
+package notice.dao;
 
-import objackie.vo.GongziFile;
+import notice.vo.GongziFile;
 
 public interface GongziFileDao {
   int insert(GongziFile gongziFile);

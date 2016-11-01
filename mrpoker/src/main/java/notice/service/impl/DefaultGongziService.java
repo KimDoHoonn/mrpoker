@@ -1,4 +1,4 @@
-package objackie.service.impl;
+package notice.service.impl;
 
 import java.io.File;
 import java.util.HashMap;
@@ -8,12 +8,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
-import objackie.dao.GongziDao;
-import objackie.dao.GongziFileDao;
-import objackie.service.GongziService;
-import objackie.util.FileUploadUtil;
-import objackie.vo.Gongzi;
-import objackie.vo.GongziFile;
+import notice.dao.GongziDao;
+import notice.dao.GongziFileDao;
+import notice.service.GongziService;
+import notice.util.FileUploadUtil;
+import notice.vo.Gongzi;
+import notice.vo.GongziFile;
 
 @Service 
 public class DefaultGongziService implements GongziService {
@@ -59,11 +59,10 @@ public class DefaultGongziService implements GongziService {
     return gongziDao.selectOne(no);
   }
     
-    
   public void updateGongzi(Gongzi gongzi) throws Exception {
     HashMap<String,Object> paramMap = new HashMap<>();
     paramMap.put("no", gongzi.getNo());
-    paramMap.put("email", gongzi.getEmail());
+    paramMap.put("writer", gongzi.getWriter()); // 확인
     
     gongziDao.update(gongzi);
   }

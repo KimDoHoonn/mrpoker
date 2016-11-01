@@ -1,9 +1,9 @@
-package objackie.dao;
+package notice.dao;
 
 import java.util.List;
 import java.util.Map;
 
-import objackie.vo.Gongzi;
+import notice.vo.Gongzi;
 
 public interface GongziDao {
   List<Gongzi> selectList(Map<String,Object> paramMap) throws Exception;

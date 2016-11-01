@@ -1,4 +1,4 @@
-package objackie.vo;
+package notice.vo;
 
 public class JsonResult {
   public static final String SUCCESS = "success";

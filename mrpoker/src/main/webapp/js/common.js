@@ -1,3 +1,3 @@
-var serverAddr = "http://localhost:8080/gongzi"
+var serverAddr = "http://localhost:8080/mrpoker"
 
 

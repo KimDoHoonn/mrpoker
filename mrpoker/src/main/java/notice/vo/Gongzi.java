@@ -1,4 +1,4 @@
-package objackie.vo;
+package notice.vo;
 
 import java.io.Serializable;
 import java.sql.Date;
@@ -9,8 +9,6 @@ public class Gongzi implements Serializable {
   static SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
   
   protected int no;
-  protected int type;
-  protected String email;
   protected String title;
   protected String contents;
   protected String writer;
@@ -62,19 +60,6 @@ public class Gongzi implements Serializable {
   public void setViewCount(int viewCount) {
     this.viewCount = viewCount;
   }
-  public int getType() {
-    return type;
-  }
-  public void setType(int type) {
-    this.type = type;
-  }
-  public String getEmail() {
-    return email;
-  }
-  public void setEmail(String email) {
-    this.email = email;
-  }
-  
 }
 
 
