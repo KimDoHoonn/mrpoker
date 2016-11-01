@@ -15,7 +15,7 @@ import notice.service.GongziService;
 import notice.vo.Gongzi;
 
 @Controller 
-@RequestMapping("/gongzi/")
+@RequestMapping("/mrpoker/")
 public class GongziController {
   @Autowired ServletContext sc;
   @Autowired GongziService gongziService;

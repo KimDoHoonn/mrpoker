@@ -33,12 +33,12 @@
     update notice set 
       NOTICE_TITLE=#{title}, 
       NOTICE_CONTS=#{contents} 
-    where NOTICE_NUMBER=#{no} and type=0
+    where no=#{no}
   </update>
   
   <delete id="delete" parameterType="int">
     delete from notice
-    where NOTICE_NUMBER=#{value} and type=0
+    where no=#{value}
   </delete> 
 </mapper>
 

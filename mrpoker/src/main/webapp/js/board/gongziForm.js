@@ -15,7 +15,6 @@ function ajaxLoadGongzi(no) {
 		}
 
 		$("#no").text(result.data.no);
-		$("#email").text(result.data.email);
 		$("#writer").text(result.data.writer);
 		$("#title").val(result.data.title);
 		$("#contents").text(result.data.contents);
