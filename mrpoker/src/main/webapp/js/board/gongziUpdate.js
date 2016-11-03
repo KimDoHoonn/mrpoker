@@ -16,8 +16,7 @@ $("#cancelBtn").click(function(event) {
 $("#updateBtn").click(function(event) {
   var gongzi = {
 	    title: $("#title").val(),
-	    contents: $("#contents").val(),
-	    email: $("email").val(),
+	    contents: $("#contents").val(),	    
 	    no: $("#no").val()
 				  }
   if (confirm("정말 변경하시겠습니까?") == true) {
@@ -36,7 +35,6 @@ function ajaxLoadGongzi(no) {
 			return
 		}
 		$("#no").val(result.data.no);
-		$("#email").val(result.data.email);
 		$("#writer").val(result.data.writer);
 		$("#title").val(result.data.title);
 		$("#contents").text(result.data.contents);

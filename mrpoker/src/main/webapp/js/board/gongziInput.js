@@ -23,7 +23,7 @@ function ajaxAddGongzi(gongzi) {
 	    	 alert("등록 실패입니다.")
 	    	 return
 	    } 
-		//window.location.href = serverAddr + "/html/board/gongzi.html"
+		window.location.href = serverAddr + "/html/board/gongzi.html"
 	    
 	}, "json")
 }

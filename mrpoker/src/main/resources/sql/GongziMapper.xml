@@ -21,7 +21,7 @@
  <select id="selectOne" resultMap="gongziMap" parameterType="int">
     select NOTICE_NUMBER,NOTICE_WRITER,NOTICE_TITLE,NOTICE_DATE,NOTICE_VIEW,NOTICE_CONTS
     from notice
-       where no = #{value}
+       where NOTICE_NUMBER = #{value}
   </select>  
   
   <insert id="insert" parameterType="gongzi">

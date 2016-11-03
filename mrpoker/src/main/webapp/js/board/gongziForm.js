@@ -7,7 +7,7 @@ $("#deleteBtn").click(function(event) {
 });
 
 function ajaxLoadGongzi(no) {
-	$.getJSON(serverAddr + "/gongzi/detail.json?no=" + no, function(obj) {
+	$.getJSON(serverAddr + "/mrpoker/detail.json?no=" + no, function(obj) {
 		var result = obj.jsonResult
 		if (result.state != "success") {
 			alert("조회 실패입니다.")
