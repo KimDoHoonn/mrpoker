@@ -9,16 +9,18 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
 import notice.dao.QnaDao;
+import notice.dao.QnaFileDao;
 import notice.service.QnaService;
 import notice.util.FileUploadUtil;
 import notice.vo.Gongzi;
 import notice.vo.GongziFile;
 import notice.vo.Qna;
+import notice.vo.QnaFile;
 
 @Service
 public class DefaultQnaService implements QnaService {
 	@Autowired QnaDao qnaDao;
-	@Autowired QnaFileDao QnaFileDao;
+	@Autowired QnaFileDao qnaFileDao;
 	
 public List<Qna> getQnaList(int pageNo, int length) throws Exception {
 	HashMap<String,Object> map = new HashMap<>();
@@ -29,7 +31,7 @@ public List<Qna> getQnaList(int pageNo, int length) throws Exception {
 
 public void insertQna(Qna qna,
 			MultipartFile file1,
-			Multipartfile file2,
+			MultipartFile file2,
 			String uploadDir) throws Exception {
 	
 	qnaDao.insert(qna);
@@ -42,7 +44,7 @@ public void insertQna(Qna qna,
 	      qnaFile.setPhopath(newFilename);
 	      qnaFile.setNo(qna.getNo());
 	      //gongziFile.setGongziNo(10200); //트랜잭션 테스트 용 
-	      gongziFileDao.insert(gongziFile);
+	      qnaFileDao.insert(qnaFile);
 	    }
 	    
 	    if (file2 != null && !file2.isEmpty()) {
@@ -55,7 +57,7 @@ public void insertQna(Qna qna,
 	    }
 	  }
 public Qna getQna(int no) throws Exception {
-    return qnaDao.selectOne(no);
+    return qnaDao.SelectOne(no);
   }
     
   public void updateQna(Qna qna) throws Exception {
