@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="notice.dao.QnaDao">
+  <resultMap type="qna" id="qnaMap">
+    <id column="QNA_NUMBER" property="no"/> 
+    <result column="ID" property="id"/>
+    <result column="QNA_TITLE" property="title"/>    
+    <result column="QNA_CONTS" property="contents"/>
+    <result column="QNA_DATE" property="createdDate"/>
+    <result column="QNA_VIEW" property="viewCount"/>
+  </resultMap>
+  
+  <select id="selectList" resultMap="qnaMap" parameterType="map">
+    select ID,QNA_NUMBER,QNA_TITLE,QNA_DATE,NOTICE_VIEW,NOTICE_CONTS
+    from qna
+    limit #{startIndex}, #{length}
+  </select>
+  
+ <select id="selectOne" resultMap="qnaMap" parameterType="int">
+    select ID,QNA_NUMBER,QNA_TITLE,QNA_DATE,QNA_VIEW,QNA_CONTS
+    from qna
+       where QNA_NUMBER = #{value}
+  </select>  
+  
+  <insert id="insert" parameterType="gongzi">
+    insert into notice(ID,NOTICE_TITLE, NOTICE_CONTS, NOTICE_VIEW, NOTICE_DATE, NOTICE_WRITER)
+    values("bug's life",#{title}, #{contents}, 0, now(), #{writer})
+  </insert>
+  
+  <update id="update" parameterType="gongzi">
+    update qna set 
+      QNA_TITLE=#{title}, 
+      QNA_CONTS=#{contents} 
+    where QNA_NUMBER=#{no}
+  </update>
+  
+  <delete id="delete" parameterType="int">
+    delete from notice
+    where no=#{value}
+  </delete> 
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
