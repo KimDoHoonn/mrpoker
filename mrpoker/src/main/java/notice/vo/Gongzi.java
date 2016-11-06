@@ -9,6 +9,7 @@ public class Gongzi implements Serializable {
   static SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
   
   protected int no;
+  protected String id;
   protected String title;
   protected String contents;
   protected String writer;

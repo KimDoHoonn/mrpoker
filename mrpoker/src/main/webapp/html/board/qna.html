@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet"href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<link rel="stylesheet"href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+<link rel="stylesheet"href="../../node_modules/bootstrap/dist/css/bootstrap-theme.min.css">
+<meta charset="UTF-8">
+
+<title>WELCOME TO POKER WORLD!</title>
+<style>
+body {
+	border: 1px solid red; 
+	width: 960px;
+	margin: 20px auto;
+	background: #000000;
+}
+
+.container {
+	border: 1px solid white;
+	background: url(bg.gif) repeat-y top left;
+	width: 960px;
+}
+
+.content {
+	border: 1px solid white;
+	width: 960px;
+	height: 600px;
+	float: left;
+}
+
+.header {
+	background: url(mainlogo.jpg);
+	background-color: #000000;
+	background-repeat: no-repeat;
+	height: 100px;
+}
+
+.footer {
+	height: 100px;
+	background: #000000;
+}
+
+.clear {
+	clear: both;
+}
+</style>
+</head>
+
+<body>
+<div class="header"></div>
+<section>	
+<script id="frTemplateText" type="text/x-handlebars-template">
+
+{{#each list}}
+<div>
+  <h1>{{title}}</h1>
+  <p>{{contents}}</p>  
+</div>
+{{/each}}
+
+</script>
+		
+<div class="crud-bar">
+<button type="button" class="btn btn-primary" style="margin: 20px"
+		onclick="location.href='qnaInput.html'">새 공지 쓰기</button>
+		</div>		
+		<div class="col-lg-12">
+			<div class="well text-center">공지사항</div>
+		</div>
+		<div id="qnaTable"></div>
+		
+		<script id="trTemplateText" type="text/x-handlebars-template">
+
+{{#each list}}
+<div class="col-md-4 sub_section">
+  <p>{{no}}</p>
+  <h3>{{title}}</h3>
+  <h3>{{writer}}</h3>
+  <p class="ellipsis">{{contents}}</p> 
+  <button class="card1" data-no="{{no}}" type="button" class="btn btn-default my-view">전체 보기</button>
+</div>
+{{/each}}
+
+</script>
+		<script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../../node_modules/handlebars/dist/handlebars.min.js"></script>
+    <script type="text/javascript" src="../../js/common.js"></script>
+    <script type="text/javascript" src="../../js/bit.js"></script>
+    <script type="text/javascript" src="../../js/board/qna.js"></script>
+		<script>
+		  ajaxFirstList()
+		</script>
+		<script>
+			ajaxQnaList()
+		</script>
+	</section>
+	<footer>
+		<h1 style="text-align: center">footer</h1>
+	</footer>
+
+
+</body>
+
+</html>
+
+
+

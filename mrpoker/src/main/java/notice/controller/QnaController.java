@@ -16,12 +16,11 @@ import notice.vo.Qna;
 
 @Controller
 @RequestMapping("/mrpoker/")
-
 public class QnaController {
 	@Autowired ServletContext sc;
 	@Autowired QnaService qnaService; // Service 기능 공부
 
-	@RequestMapping("firstlist")
+	@RequestMapping("firstlist1")
 	public String firstlist(
 			@RequestParam(defaultValue="1") int pageNo,
 			@RequestParam(defaultValue="1") int length,
@@ -31,7 +30,7 @@ public class QnaController {
 		return "qna/QnaList";		
 	}
 
-	@RequestMapping("list")
+	@RequestMapping("list1")
 	public String list(
 			@RequestParam(defaultValue="1") int pageNo,
 			@RequestParam(defaultValue="6") int length,
@@ -41,7 +40,7 @@ public class QnaController {
 		return "qna/QnaList";
 	}
 
-	@RequestMapping("add")
+	@RequestMapping("add1")
 	public String add(
 			Qna qna,
 			MultipartFile file1,
@@ -56,20 +55,20 @@ public class QnaController {
 	}
 
 
-	@RequestMapping("detail")
+	@RequestMapping("detail1")
 	public String detail(int no, Model model) throws Exception {
 		Qna qna = qnaService.getQna(no);
 		model.addAttribute("qna", qna);
 		return "qna/QnaDetail";
 	}
 
-	@RequestMapping("update")
+	@RequestMapping("update1")
 	public String update(Qna qna) throws Exception {
 		qnaService.updateQna(qna);
 		return "redirect:list.do";
 	}
 
-	@RequestMapping("delete")
+	@RequestMapping("delete1")
 	public String delete(int no) throws Exception {
 		qnaService.deleteQna(no);
 		return "redirect:list.do";

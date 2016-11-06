@@ -11,23 +11,24 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
-import notice.service.GongziService;
+import notice.service.MemberService;
 import notice.vo.Gongzi;
+import notice.vo.Member;
 
 @Controller 
-@RequestMapping("/gongzi/")
-public class GongziController {
+@RequestMapping("/Member/")
+public class MemberController {
   @Autowired ServletContext sc;
-  @Autowired GongziService gongziService;
+  @Autowired MemberService memberService;
   
   @RequestMapping("firstlist")
   public String firstlist(
       @RequestParam(defaultValue="1") int pageNo,
       @RequestParam(defaultValue="1") int length,
       Model model) throws Exception {
-    List<Gongzi> list = gongziService.getGongziList(pageNo, length);
+    List<Member> list = memberService.getMemberList(pageNo, length);
     model.addAttribute("list", list);
-    return "gongzi/GongziList";
+    return "member/MemberList";
   }
   
   
@@ -36,19 +37,19 @@ public class GongziController {
       @RequestParam(defaultValue="1") int pageNo,
       @RequestParam(defaultValue="6") int length,
       Model model) throws Exception {
-    List<Gongzi> list = gongziService.getGongziList(pageNo, length);
+    List<Member> list = memberService.getMemberList(pageNo, length);
     model.addAttribute("list", list);
     return "gongzi/GongziList";
   }
   
   @RequestMapping("add")
   public String add(
-      Gongzi gongzi,
+      Member member,
       MultipartFile file1,
       MultipartFile file2) throws Exception {
     String uploadDir = sc.getRealPath("/upload") + "/";
     try {
-      gongziService.insertGongzi(gongzi, file1, file2, uploadDir);
+      memberService.insertMember(member, file1, file2, uploadDir);
     } catch (Exception e) {
       e.printStackTrace();
     }
@@ -57,20 +58,20 @@ public class GongziController {
   
   @RequestMapping("detail")
   public String detail(int no, Model model) throws Exception {
-    Gongzi gongzi = gongziService.getGongzi(no);
-    model.addAttribute("gongzi", gongzi);
-    return "gongzi/GongziDetail";
+    Member member = memberService.getMember(no);
+    model.addAttribute("member", member);
+    return "member/MemberDetail";
   }
   
   @RequestMapping("update")
-  public String update(Gongzi gongzi) throws Exception {
-    gongziService.updateGongzi(gongzi);
+  public String update(Member member) throws Exception {
+    memberService.updateMember(member);
     return "redirect:list.do";
   }
   
   @RequestMapping("delete")
   public String delete(int no) throws Exception {
-    gongziService.deleteGongzi(no);
+    memberService.deleteMember(no);
     return "redirect:list.do";
   }
 }

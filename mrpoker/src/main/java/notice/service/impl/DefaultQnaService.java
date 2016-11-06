@@ -12,8 +12,6 @@ import notice.dao.QnaDao;
 import notice.dao.QnaFileDao;
 import notice.service.QnaService;
 import notice.util.FileUploadUtil;
-import notice.vo.Gongzi;
-import notice.vo.GongziFile;
 import notice.vo.Qna;
 import notice.vo.QnaFile;
 
